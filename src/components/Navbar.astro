@@ -1,0 +1,46 @@
+---
+interface Props {
+    selected: number;
+}
+
+const { selected } = Astro.props;
+---
+
+<div class="flex gap-x-5 mt-5 ms-5">
+    <div
+        class:list={[
+            "flex justify-center py-3 px-5",
+            selected === 1
+                ? "bg-pastel-blue text-gray-background pointer-events-none"
+                : "text-pastel-blue hover:underline",
+        ]}
+    >
+        {selected === 1 ? <span>About me</span> : <a href="/">About me</a>}
+    </div>
+    <div
+        class:list={[
+            "flex justify-center py-3 px-5",
+            selected === 2
+                ? "bg-pastel-yellow text-gray-background pointer-events-none"
+                : "text-pastel-yellow hover:underline",
+        ]}
+    >
+        {
+            selected === 2 ? (
+                <span>Projects</span>
+            ) : (
+                <a href="/projects">Projects</a>
+            )
+        }
+    </div>
+    <div
+        class:list={[
+            "flex justify-center py-3 px-5",
+            selected === 3
+                ? "bg-dusty-pink text-gray-background pointer-events-none"
+                : "text-dusty-pink hover:underline",
+        ]}
+    >
+        {selected === 3 ? <span>Contact</span> : <a href="/contact">Contact</a>}
+    </div>
+</div>
