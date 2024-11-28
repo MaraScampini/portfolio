@@ -8,6 +8,7 @@ module.exports = {
         'pastel-blue': '#D1E9F6',
         'pastel-yellow': '#F6EACB',
         'dusty-pink': '#EECAD5',
+        'light-gray-text': "#CDCDCD"
       },
     },
   },
